@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Talent IQ | Auto Assessment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    padding:30px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:#5a67f2;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+button:hover{
+    background:#3f4de0;
+}
+
+.section{
+    margin-top:25px;
+    display:none;
+}
+
+.card{
+    background:#f0f2ff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.question{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+input[type="text"]{
+    width:100%;
+    padding:8px;
+    margin-top:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🧠 Auto Assessment Generator</h1>
+
+    <center>
+        <button onclick="generateAssessment()">📊 Generate Assessment</button>
+    </center>
+
+    <!-- Assessment Section -->
+    <div class="section" id="assessmentSection">
+
+        <!-- MCQ QUESTIONS -->
+        <div class="card">
+            <h3>📘 MCQ Questions</h3>
+
+            <div class="question">
+                <p>1. Which language is mainly used for backend development?</p>
+                <input type="radio" name="q1"> Java<br>
+                <input type="radio" name="q1"> Python<br>
+                <input type="radio" name="q1"> HTML<br>
+            </div>
+
+            <div class="question">
+                <p>2. Which database is commonly used with Python?</p>
+                <input type="radio" name="q2"> MongoDB<br>
+                <input type="radio" name="q2"> PostgreSQL<br>
+                <input type="radio" name="q2"> Both A & B<br>
+            </div>
+
+            <div class="question">
+                <p>3. What does API stand for?</p>
+                <input type="radio" name="q3"> Application Programming Interface<br>
+                <input type="radio" name="q3"> Applied Program Internet<br>
+                <input type="radio" name="q3"> Advanced Python Interface<br>
+            </div>
+
+            <div class="question">
+                <p>4. Which framework is used for Python web development?</p>
+                <input type="radio" name="q4"> Django<br>
+                <input type="radio" name="q4"> React<br>
+                <input type="radio" name="q4"> Angular<br>
+            </div>
+
+            <div class="question">
+                <p>5. Which HTTP method is used to fetch data?</p>
+                <input type="radio" name="q5"> POST<br>
+                <input type="radio" name="q5"> GET<br>
+                <input type="radio" name="q5"> DELETE<br>
+            </div>
+        </div>
+
+        <!-- CODING QUESTIONS -->
+        <div class="card">
+            <h3>💻 Coding / Skill Questions</h3>
+
+            <div class="question">
+                <p>6. Write a Python program to reverse a string.</p>
+                <input type="text" placeholder="Write your answer here">
+            </div>
+
+            <div class="question">
+                <p>7. Write a SQL query to fetch all records from a table named <b>Employees</b>.</p>
+                <input type="text" placeholder="Write your SQL query here">
+            </div>
+
+            <div class="question">
+                <p>8. Write a Python function to check if a number is prime.</p>
+                <input type="text" placeholder="Write your answer here">
+            </div>
+        </div>
+
+        <!-- LOGICAL QUESTIONS -->
+        <div class="card">
+            <h3>🧮 Aptitude / Logical Questions</h3>
+
+            <div class="question">
+                <p>9. If 5 machines make 5 units in 5 minutes, how long will 1 machine take?</p>
+                <input type="radio" name="q9"> 5 minutes<br>
+                <input type="radio" name="q9"> 25 minutes<br>
+                <input type="radio" name="q9"> 1 minute<br>
+            </div>
+
+            <div class="question">
+                <p>10. What comes next in the series: 2, 4, 8, 16, ?</p>
+                <input type="radio" name="q10"> 18<br>
+                <input type="radio" name="q10"> 24<br>
+                <input type="radio" name="q10"> 32<br>
+            </div>
+        </div>
+
+        <!-- Candidate Info -->
+        <div class="card">
+            <h3>👤 Candidate Test</h3>
+            <p><b>Candidate Name:</b> Rahul Sharma</p>
+            <p><b>Time:</b> 15 Minutes</p>
+        </div>
+
+        <center>
+            <button onclick="submitTest()">✅ Submit Test</button>
+        </center>
+
+    </div>
+</div>
+
+<script>
+function generateAssessment(){
+    document.getElementById("assessmentSection").style.display = "block";
+}
+
+function submitTest(){
+    alert("Test Submitted Successfully!\nAI will evaluate the candidate.");
+}
+</script>
+
+</body>
+</html>

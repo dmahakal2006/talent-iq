@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Talent IQ | Result & Ranking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    padding:30px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Score Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#f0f2ff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card h3{
+    font-size:14px;
+    color:#555;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+/* Status */
+.shortlisted{
+    color:green;
+    font-weight:600;
+}
+
+.rejected{
+    color:red;
+    font-weight:600;
+}
+
+/* Ranking Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th,td{
+    padding:10px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+    font-size:14px;
+}
+
+th{
+    background:#5a67f2;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>📊 Result & Ranking</h1>
+
+    <!-- Candidate Result -->
+    <div class="cards">
+        <div class="card">
+            <h3>Candidate Score</h3>
+            <p>78%</p>
+        </div>
+
+        <div class="card">
+            <h3>Skill Match</h3>
+            <p>82%</p>
+        </div>
+
+        <div class="card">
+            <h3>Status</h3>
+            <p class="shortlisted">Shortlisted</p>
+        </div>
+    </div>
+
+    <!-- Ranking List -->
+    <h2>🏆 Candidate Ranking</h2>
+
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Candidate Name</th>
+            <th>Score</th>
+            <th>Skill Match</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Rahul Sharma</td>
+            <td>78%</td>
+            <td>82%</td>
+            <td class="shortlisted">Shortlisted</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Anita Patel</td>
+            <td>72%</td>
+            <td>76%</td>
+            <td class="shortlisted">Shortlisted</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Amit Verma</td>
+            <td>55%</td>
+            <td>50%</td>
+            <td class="rejected">Rejected</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Pooja Mehta</td>
+            <td>48%</td>
+            <td>45%</td>
+            <td class="rejected">Rejected</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
